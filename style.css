@@ -1,21 +1,22 @@
 html,body {
   margin: 0;
   background-color: rgb(69, 69, 69);
-}
-
-.container {
-  position: relative;
-  height: 680px;
-  width: 1360px;
-  margin: 2px auto 0;
-}
-h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  margin: 10px;
   font-size: 45px;
   transition: 0.1s;
   cursor: pointer;
+}
+
+p {
+  font-size: 1.2em;
+  font-weight: 550;
+  margin: 2px;
 }
 
 h1:hover {
@@ -23,24 +24,24 @@ h1:hover {
   font-size: 50px;
 }
 
-.wrap-card {
-      width: 390px;
-      height: 560px;
-      position: relative;
-      left: 15%;
-      }
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 50px 80px;
+  flex-wrap: wrap;
+  padding: 1.5em;
+}
 
-  .wrap-card1 {
-      width: 390px;
-      height: 560px;
-      position: relative;
-      top: -560px;
-      left: 52%;
-      }
+.wrap-card {
+  position: relative;
+  width: 390px;
+  height: 560px;
+  }
+
 
 .card {
-      width: 390px;
-      height: 560px;
+      width: 100%;
+      height: 100%;
       border: 3px solid rgb(91, 91, 91);
       position: absolute;
     }
@@ -77,17 +78,33 @@ h1:hover {
   background-size: cover;
 }
 
-.wrap-card1:hover .depan2 {
+.wrap-card:hover .depan2 {
   animation: putar-depan 0.3s 0.3s ease-in reverse both;
   cursor: pointer;
 }
 
-.wrap-card1:hover .belakang2 {
+.wrap-card:hover .belakang2 {
   animation: putar-depan 0.3s ease-in both;
   cursor: pointer;
 }
 
+
+.footer {
+  padding: 1em;
+  font-size: 1.2em;
+  font-weight: bold;
+}
 @keyframes putar-depan {
   from {transform: rotateY(0);}
   to {transform: rotateY(90deg);}
+}
+
+@media (max-width:576px) {
+  h1 {
+    font-size: 35px;
+  }
+  .wrap-card {
+    width: 280px;
+    height: 400px;
+    }
 }
