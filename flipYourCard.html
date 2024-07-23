@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation2</title>
+  <style>
+
+    html,body {
+      margin: 0;
+      background-color: rgb(69, 69, 69);
+    }
+
+    .container {
+      position: relative;
+      height: 680px;
+      width: 1360px;
+      margin: 2px auto 0;
+    }
+    h1 {
+      text-align: center;
+      color: white;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 45px;
+      transition: 0.1s;
+      cursor: pointer;
+    }
+
+    h1:hover {
+      color: rgb(221, 221, 221);
+      font-size: 50px;
+    }
+
+    .wrap-card {
+          width: 390px;
+          height: 560px;
+          position: relative;
+          left: 15%;
+          }
+
+      .wrap-card1 {
+          width: 390px;
+          height: 560px;
+          position: relative;
+          top: -560px;
+          left: 52%;
+          }
+
+    .card {
+          width: 390px;
+          height: 560px;
+          border: 3px solid rgb(91, 91, 91);
+          position: absolute;
+        }
+    
+    /* Kartu Merah */
+    .depan {
+      background-image: url(material/love.png);
+      background-size: cover;
+    }
+
+    .belakang {
+      background-image: url(material/diamond.png);
+      background-size: cover;
+    }
+
+    .wrap-card:hover .depan {
+      animation: putar-depan 0.3s 0.3s ease-in reverse both;
+      cursor: pointer;
+    }
+
+    .wrap-card:hover .belakang {
+      animation: putar-depan 0.3s ease-in both;
+      cursor: pointer;
+    }
+
+    /* Kartu Hitam */
+    .depan2 {
+      background-image: url(material/wajik.png);
+      background-size: cover;
+    }
+
+    .belakang2 {
+      background-image: url(material/sekop.png);
+      background-size: cover;
+    }
+
+    .wrap-card1:hover .depan2 {
+      animation: putar-depan 0.3s 0.3s ease-in reverse both;
+      cursor: pointer;
+    }
+
+    .wrap-card1:hover .belakang2 {
+      animation: putar-depan 0.3s ease-in both;
+      cursor: pointer;
+    }
+
+    @keyframes putar-depan {
+      from {transform: rotateY(0);}
+      to {transform: rotateY(90deg);}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+      <h1>Flip Your Card !</h1>
+      <div class="wrap-card">
+        <div class="card depan"></div>
+        <div class="card belakang"></div>    
+      </div>
+
+      <div class="wrap-card1">
+        <div class="card depan2"></div>
+        <div class="card belakang2"></div>    
+      </div>
+  </div>
+</body>
+</html>
